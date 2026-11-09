@@ -1,0 +1,74 @@
+import { StyleSheet } from 'react-native';
+
+export const menuBarStyles = StyleSheet.create({
+    container: {
+        alignItems: 'center',
+        backgroundColor: 'rgba(251, 250, 250, 0.89)',
+        shadowColor: '#000',
+        shadowOffset: {
+            width: 0,
+            height: 4,
+        },
+        shadowOpacity: 0.18,
+        shadowRadius: 6,
+        elevation: 6,
+        borderBottomColor: 'rgba(39, 35, 31, 0.12)',
+        borderBottomWidth: StyleSheet.hairlineWidth,
+        flexDirection: 'row',
+        height: 56,
+        justifyContent: 'space-between',
+        marginLeft: -25,
+        marginRight: -25,
+        marginTop: -40,
+        paddingHorizontal: 16,
+        position: 'relative',
+        zIndex: 10,
+    },
+    backButton: {
+        alignItems: 'center',
+        borderRadius: 20,
+        elevation: 20,
+        height: 40,
+        justifyContent: 'center',
+        position: 'relative',
+        width: 40,
+        zIndex: 20,
+    },
+    backButtonPressed: {
+        backgroundColor: 'rgba(39, 35, 31, 0.10)',
+    },
+    icon: {
+        height: 24,
+        width: 35,
+    },
+    title: {
+        color: '#27231F',
+        fontSize: 18,
+        fontWeight: '700',
+    },
+    titleWithAdd: {
+        left: 0,
+        position: 'absolute',
+        right: 0,
+        textAlign: 'center',
+    },
+    balanceSpace: {
+        height: 40,
+        width: 40,
+    },
+    addButton: {
+        alignItems: 'center',
+        borderRadius: 20,
+        height: 40,
+        justifyContent: 'center',
+        width: 40,
+    },
+    addButtonPressed: {
+        opacity: 0.7, // exemplo: deixa mais claro quando pressionado
+    },
+    addButtonText: {
+        fontSize: 24,
+        fontWeight: 'bold',
+        color: '#333', // cor do "+"
+    },
+});
