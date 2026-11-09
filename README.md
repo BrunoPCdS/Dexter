@@ -66,7 +66,7 @@ O projeto conta com documentação técnica baseada nos padrões da **UML**, uti
 | :--- | :--- | :--- |
 | [**Dione**](https://github.com/Dione6030) | Product Owner (PO) | Visão do produto, levantamento de requisitos e gestão de backlog. |
 | [**Ítalo**](https://github.com/istalo) | Desenvolvedor Back-end | Arquitetura da API em Python, banco de dados Neon e integração de transcrição/IA. |
-| [**Bruno**](https://github.com/BrunoPCdS) | Desenvolvedor Front-end | Desenvolvimento mobile em React Native, captura de áudio, telas do Kanban e UI/UX. |
+| [**Bruno**](https://github.com/BrunoPCdS) | Desenvolvedor full stack | Desenvolvimento mobile em React Native, captura de áudio, telas do Kanban, UI/UX ajustes backend |
 | [**Lucas**](https://github.com/lucasrochaexe) | Documentador Técnico / Arquitetura | Modelagem de sistemas, Diagramas UML (PlantUML) e documentação técnica do repositório. |
 
 ---
