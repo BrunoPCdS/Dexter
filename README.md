@@ -5,9 +5,11 @@
 **Gerenciamento inteligente de rotinas e tarefas por comando de voz, texto e quadro Kanban.**
 
 [![React Native](https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactnative.dev/)
-[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![PostgreSQL](https://img.shields.io/badge/Neon_Postgres-316192?style=for-the-badge&logo=postgresql&logoColor=white)](https://neon.tech/)
-[![OpenAI](https://img.shields.io/badge/OpenAI_API-412991?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com/)
+[![Groq](https://img.shields.io/badge/Groq-000000?style=for-the-badge)](https://groq.com/)
+[![ElevenLabs](https://img.shields.io/badge/ElevenLabs-000000?style=for-the-badge)](https://elevenlabs.io/)
 [![UML](https://img.shields.io/badge/PlantUML-000000?style=for-the-badge&logo=uml&logoColor=white)](https://plantuml.com/)
 
 > Repositório oficial da disciplina de **Projeto de Desenvolvimento 1** — *Análise e Desenvolvimento de Sistemas*.
@@ -16,9 +18,24 @@
 
 ---
 
+## 🖼️ Telas da Aplicação
+
+<p align="center">
+  <img src="./imgs/img%20(1).jpg" alt="Tela da aplicação 1" width="220">
+  <img src="./imgs/img%20(2).jpg" alt="Tela da aplicação 2" width="220">
+  <img src="./imgs/img%20(3).jpg" alt="Tela da aplicação 3" width="220">
+  <img src="./imgs/img%20(4).jpg" alt="Tela da aplicação 4" width="220">
+</p>
+<p align="center">
+  <img src="./imgs/img%20(5).jpg" alt="Tela da aplicação 5" width="220">
+  <img src="./imgs/img%20(6).jpg" alt="Tela da aplicação 6" width="220">
+  <img src="./imgs/img%20(7).jpg" alt="Tela da aplicação 7" width="220">
+  <img src="./imgs/img%20(8).jpg" alt="Tela da aplicação 8" width="220">
+</p>
+
 ## 📖 Visão Geral
 
-O **Dexter** é uma aplicação mobile assistiva voltada à produtividade e administração pessoal. Através de **Transcrição de Áudio (Speech-to-Text)** e **Processamento de Linguagem Natural (OpenAI)**, o sistema atua como um copiloto diário: o usuário pode enviar um áudio ou digitar para cadastrar suas tarefas, organizar seu fluxo de trabalho em um quadro **Kanban** interativo e receber um retorno imediato com dicas práticas geradas por Inteligência Artificial sobre como executar cada atividade com mais eficiência.
+O **Dexter** é uma aplicação mobile assistiva voltada à produtividade e administração pessoal. Através de **Transcrição de Áudio (Speech-to-Text)** e **Processamento de Linguagem Natural**, o sistema atua como um copiloto diário: o usuário pode enviar um áudio ou digitar para cadastrar suas tarefas, organizar seu fluxo de trabalho em um quadro **Kanban** interativo e receber um retorno imediato com dicas práticas geradas por Inteligência Artificial sobre como executar cada atividade com mais eficiência.
 
 ---
 
@@ -42,7 +59,8 @@ O projeto conta com documentação técnica baseada nos padrões da **UML**, uti
 - **Atores Principais:**
   - **Usuário:** Interage com o aplicativo enviando áudios/textos, gerenciando sua conta, movimentando o quadro Kanban e consultando as dicas da IA.
 - **Sistemas Externos / Atores Secundários:**
-  - **API de IA (OpenAI):** Responsável pela transcrição do áudio enviado pelo usuário (Speech-to-Text), interpretação do comando e geração do retorno em texto com dicas personalizadas para a tarefa.
+  - **API de IA (Groq):** Responsável pela transcrição do áudio enviado pelo usuário (Speech-to-Text) utilizando o modelo Whisper.
+  - **API de voz (ElevenLabs):** Responsável pela comunicação conversacional do agente de voz.
 - **Artefatos no Repositório:** Os diagramas de Casos de Uso (`.puml` / imagens exportadas) e especificações técnicas encontram-se organizados nos diretórios de documentação do projeto.
 
 ---
@@ -51,11 +69,11 @@ O projeto conta com documentação técnica baseada nos padrões da **UML**, uti
 
 | Camada | Tecnologias Utilizadas |
 | :--- | :--- |
-| **Front-end (Mobile)** | React Native, Expo, JavaScript / TypeScript |
-| **Back-end** | Python, REST API, Integração de Serviços de IA |
-| **Banco de Dados** | Neon Postgres (Serverless PostgreSQL) |
-| **Inteligência Artificial** | OpenAI API (Transcrição de Áudio / Whisper & Geração de Dicas via LLM) |
-| **Documentação & Modelagem** | Markdown, PlantUML, Astah UML |
+| **Front-end (Mobile)** | React Native, Expo, TypeScript, Expo Audio, Expo Secure Store |
+| **Back-end** | Node.js, Express, TypeScript, REST API, JWT, Zod |
+| **Banco de Dados** | PostgreSQL (Neon), Prisma ORM |
+| **Inteligência Artificial** | Groq API (Whisper para transcrição de áudio), ElevenLabs (agente conversacional) |
+| **Documentação & Modelagem** | Markdown, diagramas UML |
 | **Controle de Versão** | Git & GitHub |
 
 ---
@@ -65,9 +83,9 @@ O projeto conta com documentação técnica baseada nos padrões da **UML**, uti
 | Integrante | Função / Papel no Projeto | Responsabilidades Principais |
 | :--- | :--- | :--- |
 | [**Dione**](https://github.com/Dione6030) | Product Owner (PO) | Visão do produto, levantamento de requisitos e gestão de backlog. |
-| [**Ítalo**](https://github.com/istalo) | Desenvolvedor Back-end | Arquitetura da API em Python, banco de dados Neon e integração de transcrição/IA. |
 | [**Bruno**](https://github.com/BrunoPCdS) | Desenvolvedor full stack | Desenvolvimento mobile em React Native, captura de áudio, telas do Kanban, UI/UX ajustes backend |
-| [**Lucas**](https://github.com/lucasrochaexe) | Documentador Técnico / Arquitetura | Modelagem de sistemas, Diagramas UML (PlantUML) e documentação técnica do repositório. |
+| [**Ítalo**](https://github.com/istalo) | Desenvolvedor Back-end | Arquitetura da API em Node.js/TypeScript, banco de dados Neon e integração de transcrição/IA. |
+| [**Lucas**](https://github.com/lucasrochaexe) | Documentador Técnico / Arquitetura | Modelagem de sistemas, diagramas UML e documentação técnica do repositório. |
 
 ---
 
@@ -75,11 +93,10 @@ O projeto conta com documentação técnica baseada nos padrões da **UML**, uti
 
 ```plaintext
 Projeto-de-Desenvolvimento-1/
-├── docs/                       # Documentação técnica e artefatos de engenharia de software
-│   ├── uml/                    # Diagramas de Casos de Uso, código PlantUML (.puml) e imagens (.png/.svg)
-│   └── requisitos/             # Escopo, regras de negócio e documentação complementar
-├── backend/                    # Servidor Python, rotas da API, transcrição de áudio e integração IA/Banco
-├── mobile/                     # Aplicação cliente desenvolvida em React Native
+├── back/                       # API Node.js/TypeScript, rotas, banco e integrações de IA
+├── front/                      # Aplicação cliente desenvolvida em React Native e Expo
+├── docs/                       # Documentação técnica e diagramas
+├── imgs/                       # Imagens das telas da aplicação
 └── README.md                   # Documentação principal do projeto
 
 📊 Status do Projeto (Roadmap)
